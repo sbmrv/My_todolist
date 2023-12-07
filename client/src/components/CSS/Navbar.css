@@ -1,0 +1,71 @@
+body {
+  background-color: #ffffff;
+}
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+._logo {
+  height: 25px;
+  margin-top: 10px;
+  margin: auto;
+  justify-content: "center";
+}
+.todo_name {
+  text-decoration: none;
+  height: 100px;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+}
+._name1 {
+  color: rgb(0, 0, 0);
+  margin-right: 5px;
+  -webkit-text-stroke: 0.4px black;
+}
+._name2 {
+  margin-right: 2px;
+  color: #f3f3f3;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* side panel css code */
+.sidepanel {
+ position: fixed;
+ height: 100%;
+ width: 0;
+ top: 0;
+ left: 0;
+ background-color: #111;
+ overflow-x: hidden;
+ transition: 0.5s;
+}
+
+.sidepanel-content {
+ position: relative;
+ top: 60px;
+}
+
+.sidepanel .hamburger {
+ position: absolute;
+ top: 20px;
+ right: 22px;
+ font-size: 24px;
+ color: white;
+}
+
+.sidepanel button {
+ padding: 8px 16px;
+ text-align: center;
+ font-size: 16px;
+ margin: 4px 0;
+ border: none;
+ cursor: pointer;
+ width: 100%;
+ background-color: #f1f1f1;
+ color: black;
+}
+
+.sidepanel button:hover {
+ background-color: #ddd;
+ color: black;
+} 

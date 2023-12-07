@@ -1,0 +1,52 @@
+const Todo = () => {
+  const token = localStorage.getItem("jwt");
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      const decodedToken = jwt.decode(token);
+      console.log(decodedToken); // console 1
+      // const userId = decodedToken.userId;
+
+      const response = await axios.get(`${API_URL}/read`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const fetchedTodos = response.data;
+      console.log(response); // console 2
+      setTodos(fetchedTodos);
+    };
+
+    fetchTodos();
+  }, []);
+
+  return (
+    <div className="apptodo">
+      <div className="container">
+        <h1>Todo list</h1>
+
+        <div className="top">
+          <input type="text" placeholder="add todo.." />
+          <button style={{ width: "5rem", height: "2rem" }} className="add">
+            Add
+          </button>
+        </div>
+      </div>
+      <div className="list">
+              {todos.length > 0 ? (
+        <ul>
+          {todos.map((todo) => (
+            <li key={todo.id}>
+              {todo.task}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No todos yet.</p>
+      )}
+
+      </div>
+    </div>
+  );
+};
