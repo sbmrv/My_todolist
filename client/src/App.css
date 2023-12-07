@@ -45,8 +45,8 @@
     rgb(13, 90, 192) 50%,
     rgb(162, 52, 189) 70%
   ); */
-   background:#70370F;
-/* background: linear-gradient(79deg, rgba(0,0,0,1) 0%, rgba(89,52,5,1) 100%);  */
+  background: #70370f;
+  /* background: linear-gradient(79deg, rgba(0,0,0,1) 0%, rgba(89,52,5,1) 100%);  */
 }
 .pgcenter {
   background-color: rgb(255, 255, 255);
@@ -60,7 +60,7 @@
   display: flex;
   justify-content: space-between;
   padding: 5%;
-/* -webkit-box-shadow: inset 0px 0px 43px 4px rgba(112,55,15,0.75);
+  /* -webkit-box-shadow: inset 0px 0px 43px 4px rgba(112,55,15,0.75);
 -moz-box-shadow: inset 0px 0px 43px 4px rgba(112,55,15,0.75);
 box-shadow: inset 0px 0px 43px 4px rgba(112,55,15,0.75); */
 }
@@ -108,35 +108,37 @@ form > a {
 }
 /* copied  */
 /* media queries */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .img_ {
     display: none;
+    min-height: 80%;
+    background-color: white;
   }
   .bgcolor {
-    min-height: 100vh;
-    min-width: 100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 90%;
     padding: 5%;
-    background: linear-gradient(
-      42deg,
-      rgb(13, 90, 192) 50%,
-      rgb(162, 52, 189) 70%
-    );
+    background: linear-gradient(0deg, rgb(0, 0, 0) 30%, rgb(111, 56, 12) 30%);
   }
   .pgcenter {
-    /* background-color: rgb(201, 33, 33); */
-    padding: 5%;
-    width: 80%;
+    padding-top: 20%;
     margin: auto;
     border-radius: 10px;
     text-align: center;
-    justify-content: center;
+    justify-items: center;
     display: flex;
-    justify-content: space-between;
-    padding: 5%;
+    align-self: center;
+    min-height: 90vh;
+    background-color: transparent;
+  }
+  .pgcenter h1 {
+    font-weight: normal;
   }
   .login_ {
-    min-width: 10px;
-    line-height: 10vh;
+    min-width: 5vh;
+    line-height: 12vh;
+    margin-right: 0%;
   }
 }
 
@@ -175,19 +177,18 @@ button {
   width: 100%;
   justify-content: space-evenly;
 }
-.addtodo>input:focus {
+.addtodo > input:focus {
   border: none !important;
   background-color: rgb(228, 247, 234);
-
 }
 li {
   display: flex;
   line-height: 10vh;
   padding: 0 20px 0 20px;
 }
-._todoDiv{
+._todoDiv {
   color: rgb(0, 0, 0);
-  min-width:  450px;
+  min-width: 450px;
   /* background-color: red; */
   overflow-y: auto !important;
   /* scrollbar-width: none !important; 
@@ -195,7 +196,7 @@ li {
   white-space: nowrap;
   max-width: 450px;
 }
-._btn-group{
+._btn-group {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -212,7 +213,7 @@ li {
   justify-content: center;
   align-items: center;
 }
-.update_btn{
+.update_btn {
   width: 70px !important;
 }
 h1 {
@@ -226,7 +227,7 @@ h1 {
   align-items: flex-end; /* Align content to the right */
 }
 .logout-button {
-  margin: 30px 50px 0 0 ; /* Adjust margin as needed */
+  margin: 30px 50px 0 0; /* Adjust margin as needed */
   padding: 5px 10px;
   background-color: #2383d2;
   color: white;
