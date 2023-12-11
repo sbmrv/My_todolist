@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import img1 from "../images/user.jpg";
 import { useNavigate } from "react-router-dom";
-import {API_URL} from "../api/config"
+import { API_URL } from "../api/config";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -11,17 +11,17 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [paserr, setpaserr] = useState("");
   const navigate = useNavigate();
-  
+
   const handlesignup = async (e) => {
     e.preventDefault();
 
     try {
-      if(password !== cpassword) {
+      if (password !== cpassword) {
         console.log("Password mismatch");
-        setpaserr("password mismatch")
+        setpaserr("password mismatch");
         return;
       }
-      const response = await axios.post(API_URL, {
+      const response = await axios.post(`${API_URL}/signup`, {
         name,
         password,
         cpassword,
