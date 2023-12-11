@@ -173,13 +173,9 @@ const Home = () => {
             <br />
             <h1>Password protection</h1>
             <p className="hide_768">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
               sapiente exercitationem nesciunt est voluptatem consequatur
-              dignissimos nobis cumque error illo amet neque quos voluptatum ab,
-              aliquam hic veritatis. Maiores delectus unde vero excepturi,
-              quaerat tempore cupiditate neque, ad aspernatur architecto
-              accusantium id. Sint sunt, dolores quod quae necessitatibus
-              nostrum facere.
+              dignissimos nobis cumque error illo amet neque quos voluptatum ab
             </p>
           </span>
         </div>
