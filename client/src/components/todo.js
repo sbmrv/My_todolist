@@ -55,8 +55,9 @@ const Todo = () => {
       console.log(todo._id);
       console.log(todo.task);
       setEditTodo(todo.task)
+      fetchTodos() 
     }catch (error) {
-      console.error("Error adding todo:", error);
+      console.error("Error adding todo is", error);
   }
 }
   const handleUpdateTodo = async (todo) => {
@@ -148,6 +149,8 @@ const Todo = () => {
                     style={{
                       backgroundColor: "orange",
                       textAlign: "center",
+                      width: "100%",
+                      cursor: "pointer"
                     }}
                   >
                     edit
@@ -157,7 +160,11 @@ const Todo = () => {
                     onClick={() => handleUpdateTodo(todo)}
                     style={{
                       backgroundColor: "skyblue",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
                       textAlign: "center",
+                      width: "100%",
+                      cursor: "pointer"
                     }}
                   >
                     update
@@ -168,9 +175,13 @@ const Todo = () => {
                     style={{
                       backgroundColor: "#B60016",
                       textAlign: "center",
+                      paddingLeft: "10px",
+                      paddingRight: "10px",
+                      width: "100%",
+                      cursor: "pointer"
                     }}
                   >
-                    X
+                    Delete
                   </div>
                 </div>
               </li>
