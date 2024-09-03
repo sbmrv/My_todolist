@@ -1,0 +1,9 @@
+.nvm
+.env
+node_modules
+package-lock.json
+assets/order-manifest
+assets/products
+assets/promotions
+assets/users
+accessLog
